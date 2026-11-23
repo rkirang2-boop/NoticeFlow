@@ -1,0 +1,224 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #20243a;
+    transition: 0.3s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: white;
+    box-shadow: 0 2px 12px #0000000d;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5b50d6;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 3px;
+}
+
+#themeBtn {
+    background: #eeeeF8;
+    color: #333;
+}
+
+.admin-btn {
+    background: #5b50d6;
+    color: white;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.hero {
+    padding: 45px 0;
+}
+
+.tagline {
+    color: #5b50d6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 18px 0;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: #5b50d6;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.search-section input,
+.admin-panel input,
+.admin-panel textarea,
+.admin-panel select {
+    width: 100%;
+    padding: 15px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+.filters {
+    margin: 25px 0;
+}
+
+.filter {
+    background: white;
+    color: #555;
+}
+
+.filter.active {
+    background: #5b50d6;
+    color: white;
+}
+
+.notice-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 18px;
+}
+
+.notice-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.notice-card {
+    background: white;
+    padding: 22px;
+    border-radius: 13px;
+    border: 1px solid #e8e8ef;
+    box-shadow: 0 5px 15px #00000008;
+}
+
+.notice-card h3 {
+    margin: 12px 0;
+}
+
+.notice-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.category {
+    color: #5b50d6;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.urgent {
+    color: #d93636;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.normal {
+    color: #24875b;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.admin-panel {
+    background: white;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 12px;
+}
+
+.admin-panel textarea {
+    min-height: 100px;
+}
+
+.cancel-btn {
+    background: #eee;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #888;
+}
+
+body.dark {
+    background: #151827;
+    color: #f3f3f7;
+}
+
+body.dark .navbar,
+body.dark .notice-card,
+body.dark .admin-panel {
+    background: #22263a;
+    color: white;
+}
+
+body.dark .notice-card p,
+body.dark .subtitle {
+    color: #c1c3d1;
+}
+
+body.dark .filter {
+    background: #30354b;
+    color: white;
+}
+
+body.dark .filter.active {
+    background: #7167ed;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+    background: #30354b;
+    color: white;
+    border-color: #454a60;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}

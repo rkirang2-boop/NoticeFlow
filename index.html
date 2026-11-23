@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoticeFlow | Community Noticeboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">📢 NoticeFlow</div>
+        <div class="nav-actions">
+            <button id="themeBtn">🌙 Dark Mode</button>
+            <button class="admin-btn" onclick="showAdmin()">+ Add Notice</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="tagline">YOUR COMMUNITY. ONE NOTICEBOARD.</p>
+            <h1>Never Miss an<br><span>Important Notice.</span></h1>
+            <p class="subtitle">
+                All your important college announcements,
+                events and updates in one place.
+            </p>
+        </section>
+
+        <section class="search-section">
+            <input type="text" id="searchInput"
+                placeholder="🔍 Search notices...">
+        </section>
+
+        <section class="filters">
+            <button class="filter active" onclick="filterNotices('All')">All</button>
+            <button class="filter" onclick="filterNotices('Events')">Events</button>
+            <button class="filter" onclick="filterNotices('Education')">Education</button>
+            <button class="filter" onclick="filterNotices('Maintenance')">Maintenance</button>
+            <button class="filter" onclick="filterNotices('General')">General</button>
+        </section>
+
+        <section class="notice-heading">
+            <h2>Latest Notices</h2>
+            <span id="noticeCount">0 notices</span>
+        </section>
+
+        <section id="noticeList" class="notice-list"></section>
+
+        <section id="adminPanel" class="admin-panel hidden">
+            <h2>Add a New Notice</h2>
+            <input id="noticeTitle" placeholder="Notice title">
+            <textarea id="noticeDescription"
+                placeholder="Write notice details..."></textarea>
+
+            <select id="noticeCategory">
+                <option>Events</option>
+                <option>Education</option>
+                <option>Maintenance</option>
+                <option>General</option>
+            </select>
+
+            <select id="noticePriority">
+                <option>Normal</option>
+                <option>Urgent</option>
+            </select>
+
+            <button class="admin-btn" onclick="addNotice()">Publish Notice</button>
+            <button class="cancel-btn" onclick="hideAdmin()">Cancel</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 NoticeFlow | One place. Every important local notice.</p>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
